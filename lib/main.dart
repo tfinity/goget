@@ -271,26 +271,22 @@ class _MyHomePageState extends State<MyHomePage> {
         onWillPop: () => _exitApp(context),
         child: Scaffold(
           //floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-          floatingActionButton: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              FloatingActionButton(
-                onPressed: () => _exitApp(context),
-                tooltip: 'Go Back',
-                child: const Icon(Icons.arrow_back),
-                mini: true,
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
-              ),
-            ],
-          ) /* FloatingActionButton(
-            onPressed: () => _exitApp(context),
-            tooltip: 'Go Back',
-            child: const Icon(Icons.arrow_back),
-            mini: true,
-          ) */
-          ,
+          floatingActionButton: index == 1
+              ? Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    FloatingActionButton(
+                      onPressed: () => _exitApp(context),
+                      tooltip: 'Go Back',
+                      child: const Icon(Icons.arrow_back),
+                      mini: true,
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.05,
+                    ),
+                  ],
+                )
+              : Container(),
           body: IndexedStack(
             index: index,
             children: [
