@@ -270,6 +270,27 @@ class _MyHomePageState extends State<MyHomePage> {
       child: WillPopScope(
         onWillPop: () => _exitApp(context),
         child: Scaffold(
+          //floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+          floatingActionButton: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              FloatingActionButton(
+                onPressed: () => _exitApp(context),
+                tooltip: 'Go Back',
+                child: const Icon(Icons.arrow_back),
+                mini: true,
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.05,
+              ),
+            ],
+          ) /* FloatingActionButton(
+            onPressed: () => _exitApp(context),
+            tooltip: 'Go Back',
+            child: const Icon(Icons.arrow_back),
+            mini: true,
+          ) */
+          ,
           body: IndexedStack(
             index: index,
             children: [
@@ -366,43 +387,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                     ),
                   ),
-                  if (Platform.isIOS)
-                    Row(
-                      children: [
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        IconButton(
-                          onPressed: () async {
-                            _exitApp(context);
-                          },
-                          icon: const Icon(Icons.arrow_back),
-                        ),
-                        Expanded(
-                          child: Center(
-                            child: Visibility(
-                              child: const CircularProgressIndicator(),
-                              visible: isLoading,
-                            ),
-                          ),
-                        ),
-                        IconButton(
-                          onPressed: () async {
-                            if (Platform.isAndroid) {
-                              controllerGlobal.reload();
-                            } else if (Platform.isIOS) {
-                              controllerGlobal.loadUrl(
-                                  urlRequest: URLRequest(
-                                      url: await controllerGlobal.getUrl()));
-                            }
-                          },
-                          icon: const Icon(Icons.refresh),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                      ],
-                    ),
                 ],
               ),
             ],
