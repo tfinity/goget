@@ -6,6 +6,16 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>NSCameraUsageDescription</key>
 	<string>GoGet requires access to camera in order to Upload Picture.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>GoGet Requires Access to the photo library to Upload your Images</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>GoGet Requires Location Access to pick your current address for your orders</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>GoGet Requires Location Access to pick your current address for your orders</string>
+	<key>NSLocationUsageDescription</key>
+	<string>GoGet Requires Location Access to pick your current address for your orders</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>GoGet Requires Location Access to pick your current address for your orders</string>
 	<key>CFBundleDisplayName</key>
 	<string>Goget</string>
 	<key>CFBundleExecutable</key>
