@@ -310,8 +310,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Column(
                 children: [
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.89,
+                  Expanded(
+                    //height: MediaQuery.of(context).size.height * 0.89,
                     child: InAppWebView(
                       androidOnGeolocationPermissionsShowPrompt:
                           (InAppWebViewController controller,
