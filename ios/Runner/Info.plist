@@ -18,6 +18,8 @@
 	<string>GoGet Requires Location Access to pick your current address for your orders</string>
 	<key>CFBundleDisplayName</key>
 	<string>Goget</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Goget Requires calendar usage in order to provide you with best products</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

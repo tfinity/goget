@@ -271,7 +271,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onWillPop: () => _exitApp(context),
         child: Scaffold(
           //floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-          floatingActionButton: index == 1
+          floatingActionButton: index == 1 && Platform.isIOS
               ? Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
