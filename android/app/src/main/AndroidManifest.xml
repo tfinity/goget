@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.goget">
    <application
-        android:label="goget"
+        android:label="GoGet"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
